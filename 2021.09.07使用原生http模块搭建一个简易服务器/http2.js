@@ -5,11 +5,10 @@ const URl = require('url')
 const fs = require('fs')
 
 http.createServer((req, res) => {
-  console.log(req.headers.cookie, 222)
   // 设置跨域，也可以通过nginx配置,koa可以引入cors模块跨域
   // 允许前端访问的域名白名单, 一般写特定的域名
   res.setHeader('Access-Control-Allow-Origin', req.headers.origin)
-  // 设置允许通过的header信息, 这里自定义一个header sid
+  // 设置允许通过的header信息, 这里自定义一个header sid, 这个主要是option请求需要
   res.setHeader('Access-Control-Allow-Headers', 'sid')
   // 设置允许通过的请求方式，这里只写GET，常用的值为'PUT,POST,GET,DELETE,OPTIONS'，参考it项目
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS')

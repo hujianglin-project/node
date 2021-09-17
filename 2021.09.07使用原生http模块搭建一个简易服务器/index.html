@@ -16,10 +16,10 @@
   </style>
 </head>
 <body>
-  <input type="text" id="name" placeholder="txt名字">
+  <input type="text" id="name" placeholder="text名字">
   <input type="text" id="value" placeholder="text内容">
   <br>
-  <div id="toGet">发送get请求，生成一个名字为输入的名字，内容为input输入的内容的txt文档</div>
+  <div id="toGet">发送get请求，生成一个名字为输入的名字，内容为input输入的内容的txt文件</div>
 </body>
 </html>
 
@@ -46,7 +46,7 @@
       if (xhr.readyState === 4 && xhr.status === 200) {
         const { data } = JSON.parse(xhr.responseText)
     
-        alert(`数据返回成功${data}`)
+        alert(`数据返回成功，${data}`)
       }
     }
   }
